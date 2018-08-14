@@ -28,7 +28,7 @@ public class AuthActivity extends AppCompatActivity {
     Button submitBtn;
     EditText authToken;
     SharedPreferences sharedPreferences;
-    SharedPreferences.Editor editor = sharedPreferences.edit();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +44,8 @@ public class AuthActivity extends AppCompatActivity {
                         Toast.makeText(AuthActivity.this, "Success", Toast.LENGTH_SHORT)
                                 .show();
                         sharedPreferences = getSharedPreferences("mhonam.token", Context.MODE_PRIVATE);
-                        editor.putString("status", "true");
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+//                        editor.putString("status", "true");
                         editor.putString("token", authToken.getText().toString());
                         editor.commit();
 
