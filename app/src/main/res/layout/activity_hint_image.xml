@@ -28,4 +28,38 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/HintBtn"
+        android:layout_width="36dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/roundbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/QuesImgView"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="22dp"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/question" />
+
+    <ImageView
+        android:id="@+id/HintImgView"
+        android:layout_width="378dp"
+        android:layout_height="405dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toTopOf="@+id/NextBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HintBtn" />
+
+
 </android.support.constraint.ConstraintLayout>
