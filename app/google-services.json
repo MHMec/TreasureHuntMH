@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "560850387689",
+    "firebase_url": "https://varavelpp.firebaseio.com",
+    "project_id": "varavelpp",
+    "storage_bucket": "varavelpp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560850387689:android:470fc8b8f3688bd1",
+        "android_client_info": {
+          "package_name": "com.mh.treasurehuntmh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "560850387689-vpo3fkq97a8u2foffdq3814s9clbmvff.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mh.treasurehuntmh",
+            "certificate_hash": "fcdf2f73a5a3020fb85c3892a2a6af61230be3d8"
+          }
+        },
+        {
+          "client_id": "560850387689-1gd5k2ms1trk3sv6893gj767ji3am007.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8PLieNASkhqb_phwmY4VxxBg9UtYFe1w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "560850387689-1gd5k2ms1trk3sv6893gj767ji3am007.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
