@@ -33,7 +33,7 @@
         app:layout_constraintTop_toBottomOf="@+id/AccessText" />
 
     <EditText
-        android:id="@+id/AccessText"
+        android:id="@+id/editAccessToken"
         android:layout_width="266dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="180dp"
