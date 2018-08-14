@@ -1,5 +1,7 @@
 package com.mh.treasurehuntmh;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,6 +27,8 @@ public class AuthActivity extends AppCompatActivity {
 
     Button submitBtn;
     EditText authToken;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor = sharedPreferences.edit();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,10 +43,19 @@ public class AuthActivity extends AppCompatActivity {
                     if(tokens.contains(authToken.getText().toString())) {
                         Toast.makeText(AuthActivity.this, "Success", Toast.LENGTH_SHORT)
                                 .show();
+                        sharedPreferences = getSharedPreferences("mhonam.token", Context.MODE_PRIVATE);
+                        editor.putString("status", "true");
+                        editor.putString("token", authToken.getText().toString());
+                        editor.commit();
 
-                        Log.d(TAG, "onClick: success "  );
+                        Log.d(TAG, "onClick: success "  + tokens.get(0));
                     }
+                    else {
+                        Toast.makeText(AuthActivity.this, "Invalid Token, recheck your token",
+                                Toast.LENGTH_SHORT).show();
+                        Log.d(TAG, "onClick: failed " );
 
+                    }
                 }
                 else {
                     Toast.makeText(AuthActivity.this, "Invalid Token, recheck your token",
@@ -62,6 +75,7 @@ public class AuthActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                  tokens = (ArrayList<String>) dataSnapshot.getValue();
+
                 }
 
             @Override
