@@ -8,6 +8,6 @@ public class HintVideoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hint_video);
+        setContentView(R.layout.activity_clue_video);
     }
 }

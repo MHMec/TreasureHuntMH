@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Handler;
-import android.support.annotation.MainThread;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -34,7 +33,8 @@ public class SplashActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("mhonam.token", Context.MODE_PRIVATE);
 
         if (sharedPreferences.contains("token") ) {
-            Intent intent = new Intent(SplashActivity.this, HintImageActivity.class);
+            Intent intent = new Intent(SplashActivity.this, ClueActivity.class);
+            intent.putExtra("token", sharedPreferences.getString("token", null));
             return intent;
         }
         else {

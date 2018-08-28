@@ -1,6 +1,7 @@
 package com.mh.treasurehuntmh;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -48,8 +49,11 @@ public class AuthActivity extends AppCompatActivity {
 //                        editor.putString("status", "true");
                         editor.putString("token", authToken.getText().toString());
                         editor.commit();
-
                         Log.d(TAG, "onClick: success "  + tokens.get(0));
+
+                        Intent intent = new Intent(AuthActivity.this, ClueActivity.class);
+                        intent.putExtra("token", authToken.getText().toString());
+                        startActivity(intent);
                     }
                     else {
                         Toast.makeText(AuthActivity.this, "Invalid Token, recheck your token",
